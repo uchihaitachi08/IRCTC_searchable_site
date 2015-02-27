@@ -13,7 +13,9 @@ gem 'progress_bar'
 gem 'sunspot_rails'
 gem 'twitter-bootstrap-rails'
 gem 'sdoc',                 '0.4.0', group: :doc
-
+group :assets do
+	gem 'twitter-bootstrap-rails'
+end
 group :development, :test do
   gem 'sqlite3',     '1.3.9'
   gem 'byebug',      '3.4.0'
