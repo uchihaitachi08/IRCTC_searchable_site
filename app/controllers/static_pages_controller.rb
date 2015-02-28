@@ -4,6 +4,9 @@ class StaticPagesController < ApplicationController
   end
 
   def show
-  	@trains = Train.all
+  	@search = Train.search  do
+  		fulltext params[:search]
+  	end
+  	@trains = @search.results
   end
 end
