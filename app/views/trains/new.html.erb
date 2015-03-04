@@ -1,1 +1,21 @@
-<p>howdie</p>
+
+<h1>Fill data</h1>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@trains) do |f| %>
+      <%= f.label :number %>
+      <%= f.text_field :number %>
+
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+
+      <%= f.label :from %>
+      <%= f.text_field :from %>
+
+      <%= f.label :to %>
+      <%= f.text_field :to %>
+      <%= f.submit "Add in the database", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
